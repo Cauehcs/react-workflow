@@ -1,6 +1,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import { Divider } from "../../components/divider/divider";
 import { SignOnPopup } from "../../services/firebase/auth";
+import { auth } from "../../services/firebase/firebase";
 
 export function Login() {
   return (
