@@ -1,4 +1,4 @@
-import * as styled from "./styled";
+import * as styled from ".";
 import { colors } from "../../styles/colors";
 import { useState } from "react";
 

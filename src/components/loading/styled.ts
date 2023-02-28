@@ -10,7 +10,7 @@ const animationElement = keyframes({
   },
 });
 
-export const LoadingComponent = styled("div", {
+export const Container = styled("div", {
   svg: {
     width: "100%",
     height: "100%",

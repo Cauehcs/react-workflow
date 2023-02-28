@@ -1,6 +1,6 @@
-import { keyframes, styled } from "@stitches/react";
+import { styled } from "@stitches/react";
 
-export const ProfileIcon = styled("div", {
+export const Container = styled("div", {
   width: "100%",
   position: "relative",
   overflow: "hidden",

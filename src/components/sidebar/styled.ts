@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react";
 
-export const Sidebar = styled("aside", {
+export const Container = styled("aside", {
   position: "absolute",
   left: "0",
   transition: "all 0.1s ease-out",

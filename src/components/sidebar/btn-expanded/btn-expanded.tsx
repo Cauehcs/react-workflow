@@ -1,4 +1,4 @@
-import { ExpandIcon } from "../../../assets/icons/icon_expand";
+import { ExpandIcon } from "../../../assets/icons/icon-expand";
 import { colors } from "../../../styles/colors";
 import * as styled from "./styled";
 
@@ -11,13 +11,13 @@ export const BtnExpanded = ({
   expandedSidebar,
 }: PropsType) => {
   return (
-    <styled.BtnExpanded
+    <styled.Container
       onClick={() => {
         setExpandedSidebar(!expandedSidebar);
       }}
       id="btn-toExpand"
     >
       <ExpandIcon color={colors.theme.colors["blue-500"].value} />
-    </styled.BtnExpanded>
+    </styled.Container>
   );
 };

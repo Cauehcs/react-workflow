@@ -1,4 +1,8 @@
-import { signInWithPopup, AuthProvider } from "firebase/auth";
+import {
+  signInWithPopup,
+  AuthProvider,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { auth } from "./firebase";
 
 export const SignOnPopup = (provider: AuthProvider) => {
@@ -9,4 +13,10 @@ export const SignOnPopup = (provider: AuthProvider) => {
     .catch((error) => {
       return error;
     });
+};
+
+export const SignOnGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ prompt: "select_account" });
+  SignOnPopup(provider);
 };

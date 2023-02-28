@@ -1,9 +1,9 @@
 import { useState } from "react";
 import * as styled from "./styled";
-import { AgendaIcon } from "../../../assets/icons/icon_agenda";
-import { KanbanIcon } from "../../../assets/icons/icon_kanban";
-import { TodoIcon } from "../../../assets/icons/icon_todo";
-import { NotasIcon } from "../../../assets/icons/icon_notas";
+import { AgendaIcon } from "../../../assets/icons/icon-agenda";
+import { KanbanIcon } from "../../../assets/icons/icon-kanban";
+import { TodoIcon } from "../../../assets/icons/icon-todo";
+import { NotasIcon } from "../../../assets/icons/icon-notas";
 
 type PropsType = {
   index: number;
@@ -20,7 +20,7 @@ export const RowOfIconPages = ({ index, navigate, expandend }: PropsType) => {
   }
 
   return (
-    <styled.RowOfIconPages>
+    <styled.Container>
       <styled.IconPage
         expanded={expandend}
         active={active === 0}
@@ -49,6 +49,6 @@ export const RowOfIconPages = ({ index, navigate, expandend }: PropsType) => {
       >
         <AgendaIcon />
       </styled.IconPage>
-    </styled.RowOfIconPages>
+    </styled.Container>
   );
 };

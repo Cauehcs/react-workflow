@@ -1,10 +1,10 @@
 import { useState } from "react";
 import * as styled from "./styled";
 import { colors } from "../../styles/colors";
-import { RowOfIconPages } from "./rowOfIconPages/row_of_icon_pages";
-import { ProfileIcon } from "../profileIcon/profile-icon";
-import { BtnExpanded } from "./btnExpanded/btn-expanded";
-import { Divider } from "../divider/divider";
+import { RowOfIconPages } from "./row-of-icon-pages";
+import { ProfileIcon } from "../profile-icon";
+import { BtnExpanded } from "./btn-expanded/btn-expanded";
+import { Divider } from "../divider";
 
 type PropsType = {
   navigate: (path: string) => void;
@@ -21,7 +21,7 @@ export const Sidebar = ({ navigate, index }: PropsType) => {
   const [expandedSidebar, setExpandedSidebar] = useState(false);
 
   return (
-    <styled.Sidebar expanded={expandedSidebar}>
+    <styled.Container expanded={expandedSidebar}>
       <RowOfIconPages
         expandend={expandedSidebar}
         navigate={navigate}
@@ -39,6 +39,6 @@ export const Sidebar = ({ navigate, index }: PropsType) => {
         team="Time Principal"
         src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
       />
-    </styled.Sidebar>
+    </styled.Container>
   );
 };

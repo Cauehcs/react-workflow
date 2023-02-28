@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { Sidebar } from "../components/sidebar/sidebar";
-import { Agenda } from "../pages/agenda/agenda";
-import { Kanban } from "../pages/kanban/kanban";
-import { Notas } from "../pages/notas/notas";
+import { Sidebar } from "../components/sidebar";
+import { Agenda } from "../pages/agenda";
+import { Kanban } from "../pages/kanban";
+import { Notas } from "../pages/notas";
 import { Todo } from "../pages/todo/todo";
 import * as Styled from "./styled";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Loading } from "../components/loading/loading";
-import { Login } from "../pages/login";
+import { Loading } from "../components/loading";
+import { Auth } from "../pages/auth";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -33,7 +33,7 @@ const App = () => {
     },
     {
       path: "/auth",
-      element: <Login />,
+      element: <Auth />,
     },
   ]);
 
@@ -58,9 +58,18 @@ const App = () => {
     }
   }
   const [inLoadingPage, setInLoadingPage] = useState(false);
+  const [inSigned, setInSigned] = useState(false);
+
+  if (!inSigned || window.location.pathname === "/auth") {
+    return (
+      <Styled.Container paddingLeft="none">
+        <Auth />
+      </Styled.Container>
+    );
+  }
 
   return (
-    <Styled.Container>
+    <Styled.Container paddingLeft="left">
       <Sidebar index={getIndexRoute()} navigate={(path) => navigateTo(path)} />
       {inLoadingPage ? <Loading /> : <RouterProvider router={router} />}
     </Styled.Container>

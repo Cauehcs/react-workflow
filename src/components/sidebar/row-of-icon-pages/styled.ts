@@ -20,7 +20,7 @@ const enterButton = keyframes({
   },
 });
 
-export const RowOfIconPages = styled("div", {
+export const Container = styled("div", {
   width: "100%",
   height: "24px",
 

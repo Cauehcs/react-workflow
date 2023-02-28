@@ -1,11 +1,11 @@
-import { KanbanIcon } from "../../assets/icons/icon_kanban";
+import { KanbanIcon } from "../../assets/icons/icon-kanban";
 import { colors } from "../../styles/colors";
 import * as styled from "./styled";
 
 export const Loading = () => {
   return (
-    <styled.LoadingComponent className="loading-component">
+    <styled.Container className="loading-component">
       <KanbanIcon color={colors.theme.colors["blue-400"].value} />
-    </styled.LoadingComponent>
+    </styled.Container>
   );
 };

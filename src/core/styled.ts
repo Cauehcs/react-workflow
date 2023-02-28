@@ -3,7 +3,6 @@ import { styled } from "@stitches/react";
 export const Container = styled("div", {
   width: "100vw",
   height: "100vh",
-  paddingLeft: "82px",
 
   ".loading-component": {
     position: "absolute",
@@ -12,5 +11,16 @@ export const Container = styled("div", {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+  },
+
+  variants: {
+    paddingLeft: {
+      none: {
+        paddingLeft: "0px",
+      },
+      left: {
+        paddingLeft: "82px",
+      },
+    },
   },
 });
