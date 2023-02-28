@@ -7,6 +7,7 @@ import { Todo } from "../pages/todo/todo";
 import * as Styled from "./styled";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Loading } from "../components/loading/loading";
+import { Login } from "../pages/login";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const App = () => {
       path: "/agenda",
       element: <Agenda />,
     },
+    {
+      path: "/auth",
+      element: <Login />,
+    },
   ]);
 
   function navigateTo(path: string) {
@@ -52,7 +57,7 @@ const App = () => {
         return 0;
     }
   }
-  const [inLoadingPage, setInLoadingPage] = useState(true);
+  const [inLoadingPage, setInLoadingPage] = useState(false);
 
   return (
     <Styled.Container>
