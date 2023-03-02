@@ -17,7 +17,7 @@ export const BtnExpanded = ({
       }}
       id="btn-toExpand"
     >
-      <ExpandIcon color={colors.theme.colors["blue-500"].value} />
+      <ExpandIcon color={colors.theme.colors.blue.value} />
     </styled.Container>
   );
 };

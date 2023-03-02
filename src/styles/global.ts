@@ -3,7 +3,7 @@ import { globalCss } from "@stitches/react";
 export const globalStyles = globalCss({
   "*": {
     margin: 0,
-    fontFamily: "Lato, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     color: "$grey-400",
     boxSizing: "border-box",
   },

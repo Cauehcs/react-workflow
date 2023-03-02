@@ -1,34 +1,50 @@
 import { styled } from "@stitches/react";
 
 export const Container = styled("aside", {
-  position: "absolute",
-  left: "0",
   transition: "all 0.1s ease-out",
+
+  backgroundColor: "$primary",
+  height: "calc(100% - 64px)",
+  width: "50px",
+
+  position: "absolute",
+  left: "16px",
+  top: "50%",
+  transform: "translateY(-50%)",
+
+  padding: "24px 16px",
+  boxSizing: "content-box",
+  borderRadius: "30px",
+  boxShadow: "$sh1Primary",
+
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: "16px",
-  boxSizing: "content-box",
   justifyContent: "space-between",
 
-  backgroundColor: "$blue-400",
+  ".signout-button": {
+    transition: "all 0.1s ease-out",
 
-  height: "calc(100% - 32px)",
-  width: "50px",
+    cursor: "pointer",
 
-  ".page-content": {
+    borderRadius: "10px",
+    width: "80%",
+    aspectRatio: "1/1",
     display: "flex",
-    flexDirection: "column",
-    flex: "1",
-  },
+    alignItems: "center",
+    justifyContent: "center",
 
-  variants: {
-    expanded: {
-      true: {
-        width: "200px",
-      },
-      false: {
-        transitionDelay: ".5s",
+    svg: {
+      height: "24px",
+      width: "24px",
+      opacity: 0.5,
+    },
+
+    "&:hover": {
+      backgroundColor: "$primary-detail",
+
+      svg: {
+        opacity: 0.8,
       },
     },
   },

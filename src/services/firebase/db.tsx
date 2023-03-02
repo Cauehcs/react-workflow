@@ -1,11 +1,11 @@
 import { db } from "./firebase";
-import { child, get, ref, set } from "firebase/database";
+import { DataSnapshot, child, get, ref, set } from "firebase/database";
 
 export const setRealtTime = (path: string, value: any): void => {
   set(ref(db, path), value);
 };
 
-export const getRealTime = (path: string): any => {
+export const getRealTime = (path: string): Promise<DataSnapshot> => {
   const res = get(child(ref(db), path))
     .then((snapshot) => {
       if (snapshot.exists()) {

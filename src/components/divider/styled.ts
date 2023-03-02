@@ -10,6 +10,9 @@ export const Container = styled("div", {
       white: {
         backgroundColor: "$white",
       },
+      green: {
+        backgroundColor: "$white",
+      },
     },
   },
 });

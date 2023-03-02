@@ -16,8 +16,9 @@ export const Container = styled("div", {
     height: "50px",
     padding: "2px",
     backgroundColor: "white",
-    borderRadius: "10px",
+    borderRadius: "50%",
     objectFit: "cover",
+    objectPosition: "center",
 
     "&:hover": {
       cursor: "pointer",

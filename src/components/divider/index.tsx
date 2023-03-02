@@ -1,5 +1,5 @@
 import * as styled from "./styled";
 
 export const Divider = () => {
-  return <styled.Container color={"white"} />;
+  return <styled.Container color={"green"} />;
 };

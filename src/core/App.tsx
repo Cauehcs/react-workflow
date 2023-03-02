@@ -1,39 +1,47 @@
 import { useState } from "react";
 import { Sidebar } from "../components/sidebar";
-import { Agenda } from "../pages/agenda";
-import { Kanban } from "../pages/kanban";
-import { Notas } from "../pages/notas";
-import { Todo } from "../pages/todo/todo";
 import * as Styled from "./styled";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Loading } from "../components/loading";
-import { Auth } from "../pages/auth";
+import { auth } from "../services/firebase/firebase";
+import { KanbanPage } from "../pages/kanban";
+import { TodoPage } from "../pages/todo";
+import { NotasPage } from "../pages/notas";
+import { AgendaPage } from "../pages/agenda";
+import { AuthPage } from "../pages/auth";
+import { LoadingPage } from "../pages/loading";
+import { fetchCurrentUser } from "../data/user";
+import { SettingsPage } from "../pages/settings";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Kanban />,
+      element: <KanbanPage />,
     },
     {
       path: "/kanban",
-      element: <Kanban />,
+      element: <KanbanPage />,
     },
     {
       path: "/todo",
-      element: <Todo />,
+      element: <TodoPage />,
     },
     {
       path: "/notas",
-      element: <Notas />,
+      element: <NotasPage />,
     },
     {
       path: "/agenda",
-      element: <Agenda />,
+      element: <AgendaPage />,
+    },
+    {
+      path: "/configuracoes",
+      element: <SettingsPage />,
     },
     {
       path: "/auth",
-      element: <Auth />,
+      element: <AuthPage />,
     },
   ]);
 
@@ -59,11 +67,34 @@ const App = () => {
   }
   const [inLoadingPage, setInLoadingPage] = useState(false);
   const [inSigned, setInSigned] = useState(false);
+  const [hasLoadedUser, setHasLoadedUser] = useState(false);
+
+  auth.onAuthStateChanged(async (user) => {
+    await fetchCurrentUser();
+
+    if (user) {
+      setInSigned(true);
+    } else {
+      setInSigned(false);
+    }
+
+    setTimeout(() => {
+      setHasLoadedUser(true);
+    }, 1500);
+  });
+
+  if (!hasLoadedUser) {
+    return (
+      <Styled.Container paddingLeft="none">
+        <LoadingPage />
+      </Styled.Container>
+    );
+  }
 
   if (!inSigned || window.location.pathname === "/auth") {
     return (
       <Styled.Container paddingLeft="none">
-        <Auth />
+        <AuthPage />
       </Styled.Container>
     );
   }

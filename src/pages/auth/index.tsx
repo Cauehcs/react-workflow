@@ -2,7 +2,7 @@ import { GithubIcon } from "../../assets/icons/icon-github";
 import { GoogleButtonLogin } from "../../components/google-button-login";
 import * as styled from "./styled";
 
-export function Auth() {
+export function AuthPage() {
   return (
     <styled.Container>
       <div className="left-container">
