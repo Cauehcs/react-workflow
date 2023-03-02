@@ -61,6 +61,8 @@ const App = () => {
         return 2;
       case "/agenda":
         return 3;
+      case "/configuracoes":
+        return 4;
       default:
         return 0;
     }

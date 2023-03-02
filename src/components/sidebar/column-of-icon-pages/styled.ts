@@ -43,7 +43,7 @@ export const IconPage = styled("div", {
 
           position: "absolute",
           borderRadius: "50%",
-          right: "-4px",
+          right: "-6px",
 
           backgroundColor: "$white",
         },

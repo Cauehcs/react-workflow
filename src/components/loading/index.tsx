@@ -5,7 +5,7 @@ import * as styled from "./styled";
 export const Loading = () => {
   return (
     <styled.Container className="loading-component">
-      <KanbanIcon color={colors.theme.colors.blue.value} />
+      <KanbanIcon color={colors.theme.colors.white.value} />
     </styled.Container>
   );
 };

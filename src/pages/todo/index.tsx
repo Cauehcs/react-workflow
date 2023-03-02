@@ -1,8 +1,10 @@
+import { PageHeader } from "../../components/page-header";
 import * as styled from "./styled";
-import { useState } from "react";
 
 export const TodoPage = () => {
-  const [expandedSidebar, setexpandedSidebar] = useState(false);
-
-  return <styled.Container>Todo</styled.Container>;
+  return (
+    <styled.Container>
+      <PageHeader title="To-do" subtitle="Gerencie suas tarefas para fazer" />
+    </styled.Container>
+  );
 };

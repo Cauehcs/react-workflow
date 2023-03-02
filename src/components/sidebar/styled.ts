@@ -4,7 +4,7 @@ export const Container = styled("aside", {
   transition: "all 0.1s ease-out",
 
   backgroundColor: "$primary",
-  height: "calc(100% - 64px)",
+  height: "calc(100% - 80px)",
   width: "50px",
 
   position: "absolute",

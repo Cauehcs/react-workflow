@@ -3,12 +3,12 @@ import { styled } from "@stitches/react";
 export const Container = styled("div", {
   width: "100vw",
   height: "100vh",
-  backgroundColor: "$background",
+  backgroundColor: "$white",
   display: "flex",
   flexDirection: "row",
 
   ".left-container": {
-    backgroundColor: "$blue-400",
+    backgroundColor: "$background",
     width: "40vw",
     height: "100vh",
     padding: "24px",

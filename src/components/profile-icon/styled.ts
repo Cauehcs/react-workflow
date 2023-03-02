@@ -15,7 +15,7 @@ export const Container = styled("div", {
     width: "50px",
     height: "50px",
     padding: "2px",
-    backgroundColor: "white",
+    backgroundColor: "$primary",
     borderRadius: "50%",
     objectFit: "cover",
     objectPosition: "center",

@@ -1,8 +1,10 @@
+import { PageHeader } from "../../components/page-header";
 import * as styled from "./styled";
-import { useState } from "react";
 
 export const KanbanPage = () => {
-  const [expandedSidebar, setexpandedSidebar] = useState(false);
-
-  return <styled.Container></styled.Container>;
+  return (
+    <styled.Container>
+      <PageHeader title="Kanban" subtitle="Gerencie suas tarefas gerais" />
+    </styled.Container>
+  );
 };

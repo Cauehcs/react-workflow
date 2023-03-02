@@ -3,14 +3,15 @@ import { styled } from "@stitches/react";
 export const Container = styled("button", {
   borderRadius: "50%",
   border: "none",
-  backgroundColor: "$grey-400",
+  backgroundColor: "$grey",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   opacity: 0.2,
 
+  transition: "all 0.2s ease-in-out",
+
   "&:hover": {
-    transition: "all 0.2s ease-in-out",
     cursor: "pointer",
     opacity: 0.5,
   },
