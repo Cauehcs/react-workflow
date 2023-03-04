@@ -7,7 +7,7 @@ export const Container = styled("div", {
   flexDirection: "row",
 
   "h1, h3": {
-    color: "$white",
+    color: "$grey",
   },
 
   h1: {
@@ -18,6 +18,7 @@ export const Container = styled("div", {
   h3: {
     fontSize: "16px",
     fontWeight: "400",
+    opacity: "0.8",
   },
 
   ".title-group": {

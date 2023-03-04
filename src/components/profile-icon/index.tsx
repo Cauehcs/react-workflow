@@ -11,12 +11,7 @@ type PropsType = {
 export const ProfileIcon = ({ src, name, role, wName = false }: PropsType) => {
   return (
     <styled.Container>
-      <img
-        referrerPolicy="no-referrer"
-        src={src}
-        alt="Foto de Perfil"
-        onClick={() => signOut(getAuth())}
-      />
+      <img referrerPolicy="no-referrer" src={src} alt="Foto de Perfil" />
       {wName ?? (
         <div id="profile-info">
           <p>{name}</p>

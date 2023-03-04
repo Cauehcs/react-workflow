@@ -3,13 +3,17 @@ import { createStitches } from "@stitches/react";
 export const colors = createStitches({
   theme: {
     colors: {
-      background: "#2a3057",
+      background: "#e1e1e1",
+      "color-background": "#2a3057",
       "dark-background": "#202344",
       "light-background": "#343965",
 
-      primary: "#5559e8",
-      "primary-hover": "#474bc7",
-      "primary-detail": "#9d9ff5",
+      primary: "#5d5094",
+      "primary-opacity": "#5d509440",
+      "primary-opacity-focus": "#5d509480",
+      "primary-hover": "#594F83",
+      "primary-detail": "#7265ad",
+      "primary-detail-opacity": "#7265ad40",
 
       white: "#F5F5F5",
       water: "#64d7e7",

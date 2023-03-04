@@ -6,5 +6,6 @@ export const globalStyles = globalCss({
     fontFamily: "Nunito, sans-serif",
     color: "$grey-400",
     boxSizing: "border-box",
+    userSelect: "none",
   },
 });
